@@ -31,14 +31,11 @@ echo "You have chosen $version"
 
 git clone --recurse-submodules https://github.com/xsuite/DA_study_template.git --branch $version study
 
-# Change the directory to the repository
-cd study
-
 # Install miniforge if Python 3.9 or higher is not installed
-echo "Is Python 3.9 or higher installed on your system? (y/n)"
+echo "Is Python 3.9 or higher installed and available on your system from this terminal? (y/n)"
 read python
 if [ $python == "y" ]; then
-    echo "Python 3.9 or higher is installed. Proceeding..."
+    echo "Python 3.9 or higher is available. Proceeding..."
 elif [ $python == "n" ]; then
     echo "Python 3.9 or higher is not installed. Installing with miniforge..."
     wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
@@ -50,12 +47,14 @@ else
     exit 1
 fi
 
+# Change the directory to the repository
+cd study
+
 # Insall requirments using pip
 pip install -r requirements.txt
 
 # Run xsuite-prebuild regenerate
 xsuite-prebuild regenerate
-
 
 ### Now simplifying the repository to only the necessary files for the user to run the study
 echo "Simplifying the repository to only the necessary files for the user to run the study"

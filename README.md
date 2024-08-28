@@ -2,13 +2,13 @@
 
 ## Introduction
 
-This repository aims at turning the initial [Dynamic Aperture template](https://github.com/xsuite/DA_study_template), designed to create large, parallelized, parameter scans, into a simpler set of scripts for studying the dynamic aperture of a given accelerator model, under a fixed configuration.
+This minimal repository aims at turning the initial [Dynamic Aperture template](https://github.com/xsuite/DA_study_template), designed to create large, parallelized, parameter scans, into a simpler set of scripts for studying the dynamic aperture of a given accelerator model, under a fixed configuration.
 
 ## Installation
 
 The script ```generate.sh``` should take care of:
 
-1. Cloning the repository for the LHC version of interest (HL 1.6, HL 1.3, run III, run III ions)
+1. Cloning the repository for the LHC version of interest (HL 1.6, HL 1.3, run III, run III ions). Note that the runIII configurations are only available on CERN AFS for now.
 2. Installing the required packages, along with Python if needed
 3. Restructuring the repository to keep only the necessary files
 4. Mutate the configuration files to match the desired study
@@ -21,7 +21,7 @@ bash generate.sh
 
 And follow the instructions.
 
-In the event of an issue, please follow the [manual installation guide](manual_installation.md). Note that the runIII configurations are only available on CERN AFS for now.
+However, it is quite basic, and most likely not very robust. Therefore, in the event of an issue, please follow the [manual installation guide](manual_installation.md).
 
 ## Usage
 
