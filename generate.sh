@@ -36,10 +36,9 @@ echo "You have chosen $version"
 git clone --recurse-submodules https://github.com/xsuite/DA_study_template.git --branch $version study
 
 # Change the directory to the repository
-cd DA_study_template
+cd study
 
 # Ask if Poetry is already installed
-
 echo "Is Poetry already installed on your system? (y/n)"
 read poetry
 
@@ -89,7 +88,6 @@ rm -rf .gitattributes
 rm -rf .gitmodules
 rm source_python.sh
 rm requirements.txt
-rm pyproject.toml
 rm README.md
 rm LICENSE
 rm -rf doc
@@ -100,3 +98,4 @@ rm -rf studies/scripts
 mv studies/template_jobs/1_build_distr_and_collider 1_build_distr_and_collider
 mv studies/template_jobs/2_configure_and_track 2_configure_and_track
 mv studies/filling_scheme filling_scheme
+rm -rf studies
