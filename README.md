@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This minimal repository aims at turning the initial [Dynamic Aperture template](https://github.com/xsuite/DA_study_template), designed to create large, parallelized, parameter scans, into a simpler set of scripts for studying the dynamic aperture of a given accelerator model, under a fixed configuration.
+This minimal repository aims at turning the initial [Dynamic Aperture template](https://github.com/xsuite/DA_study_template), designed to create large, parallelized, parameter scans, into a simpler set of scripts for making simulations of a given accelerator model, under a fixed configuration.
 
 ## Installation
 
