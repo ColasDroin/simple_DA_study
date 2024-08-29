@@ -26,7 +26,6 @@ echo "You have chosen $version"
 
 # Clone the repository https://github.com/xsuite/DA_study_template.git with the branch corresponding
 # to the choice made by the user
-
 git clone --recurse-submodules https://github.com/xsuite/DA_study_template.git --branch $version study
 
 # Install miniforge if Python 3.9 or higher is not installed
@@ -49,13 +48,11 @@ fi
 cd study
 
 # Insall requirements using pip
+echo "Installing requirements"
 pip install -r requirements.txt
-
-# Run xsuite-prebuild regenerate
 xsuite-prebuild regenerate
 
 echo "Simplifying the repository to only the necessary files for the user to run the study"
-
 rm -rf .git
 rm -rf .gitignore
 rm -rf .gitattributes
