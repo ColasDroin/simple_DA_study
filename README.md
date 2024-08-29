@@ -19,9 +19,9 @@ Simply run the following command:
 bash generate.sh
 ```
 
-And follow the instructions.
+And follow the instructions. Don't forget to re-activate the virtual environment using ```source miniforge/bin/activate``` every time you open a new terminal and intend to run the Python scripts.
 
-However, it is quite basic, and most likely not very robust. Therefore, in the event of an issue, please follow the [manual installation guide](manual_installation.md).
+Keep in mind that it remains quite basic, and most likely not very robust. In the event of an issue, please follow the [manual installation guide](manual_installation.md).
 
 ## Usage
 
