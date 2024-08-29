@@ -1,8 +1,6 @@
 #!/bin/bash
 
 # Ask which version of LHC study to generate: hl16 (choice a), hl13 (choice b), runIII (choice c) or runIII_ions_2024 (choice d)
-# Store the choice in a variable, ensuring that the choice is valid
-
 echo "Which version of LHC would you like to use for your study?"
 echo "a) hl16"
 echo "b) hl13"
@@ -50,13 +48,12 @@ fi
 # Change the directory to the repository
 cd study
 
-# Insall requirments using pip
+# Insall requirements using pip
 pip install -r requirements.txt
 
 # Run xsuite-prebuild regenerate
 xsuite-prebuild regenerate
 
-### Now simplifying the repository to only the necessary files for the user to run the study
 echo "Simplifying the repository to only the necessary files for the user to run the study"
 
 rm -rf .git
@@ -79,11 +76,5 @@ mv studies/filling_scheme filling_scheme
 rm -rf studies
 
 echo "Now mutating the configuration files to match the new structure"
-
-# Now edit the configuration file 1_build_distr_and_collider/config.yaml
-# to replace ../../../../../external_dependencies/ ../external_dependencies/
 sed -i 's|../../../../../external_dependencies/|../external_dependencies/|g' 1_build_distr_and_collider/config.yaml
-
-# Now edit the configuration file 2_configure_and_track/config.yaml
-# to replace ../../filling_scheme/ with ../filling_scheme/
 sed -i 's|../../filling_scheme/|../filling_scheme/|g' 2_configure_and_track/config.yaml
